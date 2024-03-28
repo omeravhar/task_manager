@@ -1,0 +1,5 @@
+{
+    "require": {
+        "asantibanez/laravel-blade-sortable": "^1.3"
+    }
+}

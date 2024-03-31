@@ -756,9 +756,7 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset('js/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
+
 <!-- Bootstrap 4 -->
 <script src="{{asset('js/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- ChartJS -->
@@ -780,10 +778,36 @@
 <!-- overlayScrollbars -->
 <script src="js/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('js/dist/js/adminlte.js')}}"></script>
+<!--<script src="{{asset('js/dist/js/adminlte.js')}}"></script>-->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{asset('js/dist/js/pages/dashboard.js')}}"></script>
+<!--<script src="{{asset('js/dist/js/pages/dashboard.js')}}"></script>-->
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('js/dist/js/demo.js')}}"></script>
+<!--<script src="{{asset('js/dist/js/demo.js')}}"></script>-->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+//$( function() {
+   function allowDrop(ev) {
+       
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+
+  ev.preventDefault();
+
+  var data = ev.dataTransfer.getData("text");
+  let omer = document.getElementById(data);
+  console.log(omer);
+  ev.target.after(document.getElementById(data));
+  
+}
+
+
+//  } );
+</script>
 </body>
 </html>

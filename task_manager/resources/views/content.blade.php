@@ -1,6 +1,10 @@
- @extends('main')   
+@extends('main')   
 @section('content')    
- 
+<style>
+    .card.card-success {
+        min-height: 50%;
+    }
+</style>
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">

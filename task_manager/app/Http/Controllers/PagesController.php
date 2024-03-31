@@ -10,5 +10,14 @@ class PagesController extends Controller
     public static function showMainPage(){
 //        return date("Y-m-d H:i:s");
         return view("content");
-    } 
+    }
+    
+    
+    
+    
+    public static function showDashboard(){
+        return view("dashboardContent");
+    }
 }
+
+

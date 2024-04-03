@@ -7,32 +7,32 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('css/fontawesome-free/css/all.min.css')}}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Ionicons -->
-  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.css" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
-  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">-->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
-
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="{{asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="{{asset('plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}">
   <!-- Tempusdominus Bbootstrap 4 -->
-  <!--<link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <!--<link rel="stylesheet" href="{{asset('css/icheck-bootstrap/icheck-bootstrap.min.css')}}">-->
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="{{asset('css/jqvmap/jqvmap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
+  <link rel="stylesheet" href="{{asset('plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
+  <!-- Bootstrap4 Duallistbox -->
+  <link rel="stylesheet" href="{{asset('plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css')}}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('css/css/adminlte.min.css')}}">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{{asset('css/OverlayScrollbars.min.css')}}">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="{{asset('css/daterangepicker/daterangepicker.css')}}">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-  
-  <!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">-->
-<!--<link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">-->
+  <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{asset('plugins/toastr/toastr.min.css')}}">
+  <link rel="stylesheet" href="{{asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css')}}">
   <!-- Google Font: Source Sans Pro -->
-  <!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.css" referrerpolicy="no-referrer" />-->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal.min.css" integrity="sha512-888I2nScRzrb/WNZ3qsa5kiZNmaEsvz8HEVQZRGokIEOj/sMnUlLClqP7itKJYDhXWsmp+1usxoCidSEfW2rWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -738,7 +738,7 @@
     <!-- /.content-header -->
     
 @yield('content')
-  
+<!--@yield('modalMainDashboard')--> 
   
   
 <footer class="main-footer">
@@ -755,50 +755,39 @@
   </aside>
   <!-- /.control-sidebar -->
 </div>
-<!-- ./wrapper -->
-
 <!-- jQuery -->
-<script src="{{asset('js/jquery/jquery.min.js')}}"></script>
-<!-- jQuery UI 1.11.4 -->
-<!--<script src="{{asset('js/jqvmap/maps/jquery.vmap.usa.js')}}"></script>-->
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('js/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<!-- ChartJS -->
-<script src="{{asset('js/chart.js/Chart.min.js')}}"></script>
-<!-- Sparkline -->
-<!--<script src="plugins/sparklines/sparkline.js"></script>-->
-<!-- JQVMap -->
-<script src="{{asset('js/jqvmap/jquery.vmap.min.js')}}"></script>
-<script src="{{asset('js/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
-<!-- jQuery Knob Chart -->
-<script src="{{asset('js/jquery-knob/jquery.knob.min.js')}}"></script>
-<!-- daterangepicker -->
-<script src="{{asset('js/moment/moment.min.js')}}"></script>
-<script src="{{asset('js/daterangepicker/daterangepicker.js')}}"></script>
+<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!-- Select2 -->
+<script src="{{asset('plugins/select2/js/select2.full.min.js')}}"></script>
+<!-- Bootstrap4 Duallistbox -->
+<script src="{{asset('plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js')}}"></script>
+<!-- InputMask -->
+<script src="{{asset('plugins/moment/moment.min.js')}}"></script>
+<script src="{{asset('plugins/inputmask/min/jquery.inputmask.bundle.min.js')}}"></script>
+<!-- date-range-picker -->
+<script src="{{asset('plugins/daterangepicker/daterangepicker.js')}}"></script>
+<!-- bootstrap color picker -->
+<script src="{{asset('plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<!--<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>-->
-<!-- Summernote -->
-<!--<script src="plugins/summernote/summernote-bs4.min.js"></script>-->
-<!-- overlayScrollbars -->
-<script src="js/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="{{asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+<!-- Bootstrap Switch -->
+<script src="{{asset('plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}"></script>
 <!-- AdminLTE App -->
-<!--<script src="{{asset('js/dist/js/adminlte.js')}}"></script>-->
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<!--<script src="{{asset('js/dist/js/pages/dashboard.js')}}"></script>-->
+<script src="{{asset('dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('plugins/toastr/toastr.min.js')}}"></script>
+<script src="{{asset('plugins/sweetalert2/sweetalert2.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<!--<script src="{{asset('js/dist/js/demo.js')}}"></script>-->
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>--> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{asset('dist/js/demo.js')}}"></script>
+<script src="{{asset('js/requests.js')}}"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.min.js" integrity="sha512-0wCoO9w07Mu4MnC918HEsFyXhVJVoxeq+RD4XXYukmLswUHMCRbBomZE+NjxBtv88QTU/fImTY+PclhlMpJ4JA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modalmanager.js" integrity="sha512-1WwRJ0g63FREHWoeqiotPVHlC/OeStljQ3dBKHeahzzEZ+PDGn8QxWRv4MMcRZfPBYdNQCMnX2HtOCkLg4A0PA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>-->
 <script>
 
-   function allowDrop(ev) {
-       
+function allowDrop(ev) {       
   ev.preventDefault();
 }
 
@@ -811,49 +800,99 @@ function drop(ev) {
   ev.preventDefault();
 
   var data = ev.dataTransfer.getData("text");
-  let omer = document.getElementById(data);
-  console.log(omer);
-  ev.target.after(document.getElementById(data));
+//  let omer = document.getElementById(data);
+//  console.log("target - "+ev.target);
+//  console.log(ev.toElement);
+//  console.log(ev.target);
+//  console.log(ev.target.classList.contains("child"));
+  if(ev.target.classList.contains("child")|| ev.target.classList.contains("father")){
+      ev.target.after(document.getElementById(data)); 
+  }
   
 }
 
-
-//datepicker jqueryui 
-$( function() {
-    var dateFormat = "mm/dd/yy",
-      from = $( "#from" )
-        .datepicker({
-          defaultDate: "+1w",
-          changeMonth: true,
-          numberOfMonths: 3
-        })
-        .on( "change", function() {
-          to.datepicker( "option", "minDate", getDate( this ) );
-        }),
-      to = $( "#to" ).datepicker({
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 3
-      })
-      .on( "change", function() {
-        from.datepicker( "option", "maxDate", getDate( this ) );
-      });
- 
-    function getDate( element ) {
-      var date;
-      try {
-        date = $.datepicker.parseDate( dateFormat, element.value );
-      } catch( error ) {
-        date = null;
-      }
- 
-      return date;
-    }
-  } );
-$(document).ready(function() {
-  $('select').selectpicker();
+$(".omer").on("click",function(){
+    console.log($(this).attr('id'));
 });
 
+
+
+$(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+
+    //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    //Money Euro
+    $('[data-mask]').inputmask()
+
+    //Date range picker
+    $('#reservationdate').datetimepicker({
+        format: 'L'
+    });
+    
+    
+    //Date range picker
+    $('#reservation').daterangepicker()
+    //Date range picker with time picker
+    $('#reservationtime').daterangepicker({
+      timePicker: true,
+      timePickerIncrement: 30,
+      
+      
+      locale: {
+        format: 'MM/DD/YYYY'
+      }
+    });
+    //Date range as a button
+    $('#daterange-btn').daterangepicker(
+      {
+        ranges   : {
+          'Today'       : [moment(), moment()],
+          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        startDate: moment().subtract(29, 'days'),
+        endDate  : moment()
+      },
+      function (start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+      }
+    )
+
+    //Timepicker
+    $('#timepicker').datetimepicker({
+      format: 'LT',
+      
+    })
+    
+    //Bootstrap Duallistbox
+    $('.duallistbox').bootstrapDualListbox()
+
+    //Colorpicker
+    $('.my-colorpicker1').colorpicker()
+    //color picker with addon
+    $('.my-colorpicker2').colorpicker()
+
+    $('.my-colorpicker2').on('colorpickerChange', function(event) {
+      $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+    });
+
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    });
+
+  })
 </script>
 </body>
 </html>

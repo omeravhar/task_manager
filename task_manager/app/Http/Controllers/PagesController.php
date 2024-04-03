@@ -18,6 +18,16 @@ class PagesController extends Controller
     public static function showDashboard(){
         return view("dashboardContent");
     }
+    
+    
+    
+    
+    public static function showDashboardAdvanced(){
+        return view("advanced");
+    }
+    
+    
+    
 }
 
 

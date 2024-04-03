@@ -10,3 +10,4 @@ Route::get('/', function () {
 
 Route::get('main', [PagesController::class, 'showMainPage']);
 Route::get('dashboard', [PagesController::class, 'showDashboard']);
+Route::get('advanced', [PagesController::class, 'showDashboardAdvanced']);
